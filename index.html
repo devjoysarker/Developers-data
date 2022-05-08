@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-CURD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+   <!-- Data Teables -->
+    <div class="deves">
+        <a class="btn btn-primary" data-bs-toggle="modal" href="#modal_add">Add New devs</a>
+        <hr>
+     <div class="card">
+         <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                     <tr>
+                         <th>#</th>
+                         <th>Name</th>
+                         <th>Email</th>
+                         <th>Call </th>
+                         <th>Photo</th>
+                         <th>Action</th>
+                     </tr>
+                </thead>
+                <tbody id="deve_list_add">
+
+                </tbody>
+            </table>
+         </div>
+     </div>
+    </div>
+ <!-- Add modal -->
+ 
+ <div class="modal fade" id="modal_add">
+     <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <div class="modal-title">
+                     <h2>Add New Developer</h2>
+                 </div>
+             </div>
+             <div class="modal-body">
+                 <form id="devs_add_form">
+                     <div class="form-group mb-3">
+                         <label for="">Name</label>
+                         <input id="name" type="text" class="form-control">
+                     </div>
+                     <div class="form-group mb-3">
+                         <label for="">Email</label>
+                         <input id="email" type="text" class="form-control">
+                     </div>
+                     <div class="form-group mb-3">
+                         <label for="">Photo</label>
+                         <input id="photo" type="text" class="form-control">
+                     </div>
+                     <div class="form-group mb-3">
+                        <label for="">skill</label>
+                        <select name="" id="skill-load" class="form-control">
+                          <option value="#">-Select-</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="submit" class="w-100 btn btn-primary" data-bs-dismiss="modal" value="Submit">
+                    </div>
+                     
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
+
+ <div class="modal fade" id="modal_view">
+     <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+             <div class="modal-body">
+               <div class="singal-body">
+   
+               </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+ <div class="modal fade" id="modal_edit">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2>Edit Developer data</h2>
+                <form id="devs_edit_form">
+                    <div class="form-group mb-3">
+                        <label for="">Name</label>
+                        <input id="ename" type="text" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input id="edit_id" type="hidden" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="">Email</label>
+                        <input id="eemail" type="text" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="">Photo</label>
+                        <img class="w-100" id="epreview" src="" alt="">
+                        <input id="ephoto" type="text" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                       <label for="">skill</label>
+                       <input name="" id="eskill-load" class="form-control">
+                   </div>
+                   <div class="form-group mb-3">
+                       <input type="submit" class="w-100 btn btn-primary" data-bs-dismiss="modal" value="Submit">
+                   </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_delete">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2>Are you Sure ?</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sed officiis quaerat officia aliquam corrupti!</p>
+                <div class="btns mt-3 d-flex justify-content-end">
+                    <button data-bs-dismiss="modal" class="btn btn-info">Close</button>&nbsp;&nbsp;
+                    <button data-bs-dismiss="modal" class="btn btn-danger" delid="" id="deldata">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- JS Fils -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
